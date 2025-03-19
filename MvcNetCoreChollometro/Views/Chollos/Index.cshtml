@@ -1,0 +1,18 @@
+﻿@model List<Chollo>
+
+<h1 class="font-monospace">Web Job Chollometro</h1>
+
+<h2 class="text-danger">
+	Numero de chollos: @ViewData["ELEMENTOS"]
+</h2>
+
+@foreach (Chollo chollo in Model){
+	<hr />
+	<div class="border border-1">
+		<h2 class="text-primary">@chollo.Titulo</h2>
+
+		<p>@Html.Raw(@chollo.Descripcion)</p>
+
+		<img src="@chollo.Link" width="250" height="250" />
+	</div>
+}
